@@ -1,0 +1,1 @@
+@extent('page.synopsis')
