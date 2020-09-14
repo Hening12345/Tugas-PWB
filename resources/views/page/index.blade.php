@@ -38,16 +38,19 @@
       <div class="navbar-collapse collapse justify-content-end" id="navbarDefault">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link js-scroll active" href="/">Home</a>
+            <a class="nav-link js-scroll active" href="{{ url('/')}}">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll" href="/about">About</a>
+            <a class="nav-link js-scroll" href="{{ url('/about')}}">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll" href="/synopsis">Synopsis</a>
+            <a class="nav-link js-scroll" href="{{ url('/synopsis')}}">Synopsis</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll" href="/character">Character</a>
+            <a class="nav-link js-scroll" href="{{ url('/character')}}">Character</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll" href="{{ url('/mahasiswa')}}">Mahasiswa</a>
           </li>
         </ul>
       </div>

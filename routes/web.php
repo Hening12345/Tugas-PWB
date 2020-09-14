@@ -29,4 +29,6 @@ Route::get('/character', function () {
     return view('page.character');
 });
 
+Route::get('/mahasiswa', 'MahasiswaController@index');
+
 
