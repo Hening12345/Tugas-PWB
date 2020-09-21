@@ -76,38 +76,26 @@
         <div class="col-sm-12">
           <div class="title-box text-center">
             <h1 class="title-a">
-              Tabel Mahasiswa
+              Detail Jurusan
             </h1>
             <div class="line-mf"></div>
           </div>
         </div>
       </div>
-            <table class="table">
-              <thead class="thead-black">
-                <tr>
-                  <th scope="col">#</th>
-                  <th scope="col">Nama</th>
-                  <th scope="col">Email</th>
-                  <th scope="col">Jurusan</th>
-                  <th scope="col">Aksi</th>
-                </tr>
-              </thead>
-              <tbody>
-                @foreach( $mahasiswa as $mhs )
-                <tr>
-                  <th scope="row">{{ $loop->iteration }}</th>
-                  <td>{{ $mhs->nama }}</td>
-                  <td>{{ $mhs->email }}</td>
-                  <td>{{ $mhs->jurusan }}</td>
-                  <td>
-                    <a href="" class="badge badge-success">edit</a>
-                    <a href="" class="badge badge-danger">delete</a>
-                  </td>
-                </tr>
-                @endforeach
-              </tbody>
-              
-            </table>
+            <div class="card">
+  <div class="card-body">
+    <h2 class="card-title">{{ $showjrs->nama_jurusan }}</h2>
+
+    <a href="{{ $showjrs->id }}/editjrs" class="btn btn-primary">Edit</a>
+    
+    <form action="/jurusan/{{ $showjrs->id }}" method="post" class="d-inline">
+      @method('delete')
+      @csrf
+    <button type="submit" class="btn btn-danger">Delete</button>
+    </form>
+    <a href="/jurusan" class="card-link">Kembali</a>
+  </div>
+</div>
 </div>
 
 <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
@@ -131,4 +119,5 @@
 </html>
 
  
+
 

@@ -52,6 +52,9 @@
           <li class="nav-item">
             <a class="nav-link js-scroll" href="<?php echo e(url('/mahasiswa')); ?>">Mahasiswa</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll" href="<?php echo e(url('/jurusan')); ?>">Jurusan</a>
+          </li>
         </ul>
       </div>
     </div>

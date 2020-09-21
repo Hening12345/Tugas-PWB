@@ -76,38 +76,25 @@
         <div class="col-sm-12">
           <div class="title-box text-center">
             <h1 class="title-a">
-              Tabel Mahasiswa
+              Form Tambah Data Jurusan
             </h1>
             <div class="line-mf"></div>
           </div>
         </div>
       </div>
-            <table class="table">
-              <thead class="thead-black">
-                <tr>
-                  <th scope="col">#</th>
-                  <th scope="col">Nama</th>
-                  <th scope="col">Email</th>
-                  <th scope="col">Jurusan</th>
-                  <th scope="col">Aksi</th>
-                </tr>
-              </thead>
-              <tbody>
-                @foreach( $mahasiswa as $mhs )
-                <tr>
-                  <th scope="row">{{ $loop->iteration }}</th>
-                  <td>{{ $mhs->nama }}</td>
-                  <td>{{ $mhs->email }}</td>
-                  <td>{{ $mhs->jurusan }}</td>
-                  <td>
-                    <a href="" class="badge badge-success">edit</a>
-                    <a href="" class="badge badge-danger">delete</a>
-                  </td>
-                </tr>
-                @endforeach
-              </tbody>
-              
-            </table>
+            <form method="post" action="/jurusan">
+              @csrf
+  <div class="form-group">
+    <label for="nama_jurusan">Nama Jurusan :</label>
+    <input type="text" class="form-control @error('nama_jurusan') is-invalid @enderror" id="nama_jurusan" placeholder="Masukkan Nama Jurusan" name="nama_jurusan" value="{{ old('nama_jurusan') }}">
+    @error ('nama_jurusan')
+    <div class="invalid-feedback">
+      {{ $message }}
+    </div>
+    @enderror
+  </div>
+  <button type="submit" class="btn btn-primary">Tambah Data!</button>
+</form>
 </div>
 
 <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
@@ -131,4 +118,5 @@
 </html>
 
  
+
 

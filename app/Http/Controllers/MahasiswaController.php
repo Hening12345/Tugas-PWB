@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-use App\jurusan;
+use App\mahasiswa;
 
 class MahasiswaController extends Controller
 {
@@ -15,8 +15,8 @@ class MahasiswaController extends Controller
      */
     public function index()
     {
-        /*$mahasiswa = jurusan::all();*/
-        return view('page.mahasiswa'/*, ['jurusan' => $mahasiswa]*/);
+        $page = mahasiswa::all();
+        return view('page.mahasiswa', ['mahasiswa' => $page]);
     }
 
     /**

@@ -13,7 +13,7 @@
   <!-- Bootstrap CSS File -->
   <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <!-- Libraries CSS Files -->
-   <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
   <link href="lib/animate/animate.min.css" rel="stylesheet">
   <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
   <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
@@ -51,6 +51,9 @@
           </li>
           <li class="nav-item">
             <a class="nav-link js-scroll" href="{{ url('/mahasiswa')}}">Mahasiswa</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll" href="{{ url('/jurusan')}}">Jurusan</a>
           </li>
         </ul>
       </div>

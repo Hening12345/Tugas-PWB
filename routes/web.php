@@ -31,4 +31,13 @@ Route::get('/character', function () {
 
 Route::get('/mahasiswa', 'MahasiswaController@index');
 
+Route::get('/jurusan', 'JurusanController@index');
+Route::get('/jurusan/create', 'JurusanController@create');
+Route::get('/jurusan/{jurusan}', 'JurusanController@show');
+Route::post('/jurusan', 'JurusanController@store');
+Route::delete('/jurusan/{jurusan}', 'JurusanController@destroy');
+Route::get('/jurusan/{jurusan}/editjrs', 'JurusanController@edit');
+Route::patch('/jurusan/{jurusan}', 'JurusanController@update');
+Route::resource('jurusan', 'JurusanController');
+
 
