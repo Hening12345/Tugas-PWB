@@ -55,6 +55,9 @@
           <li class="nav-item">
             <a class="nav-link js-scroll" href="{{ url('/jurusan')}}">Jurusan</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll" href="{{ url('/siswa')}}">Siswa</a>
+          </li>
         </ul>
       </div>
     </div>

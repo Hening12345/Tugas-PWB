@@ -79,37 +79,35 @@
         <div class="col-sm-12">
           <div class="title-box text-center">
             <h1 class="title-a">
-              Tabel Jurusan
+              Tabel Siswa
             </h1>
             <div class="line-mf"></div>
           </div>
         </div>
       </div>
-        <a href="/jurusan/create" class="btn btn-primary my-3">Tambah Data Jurusan</a>
-            @if (session('status'))
-            <div class="alert alert-success">
-              {{ session('status') }}
-            </div>
-            @endif
-        <table class="table">
+            <table class="table">
               <thead class="thead-black">
                 <tr>
                   <th scope="col">#</th>
-                  <th scope="col">Nama Jurusan</th>
+                  <th scope="col">Nama</th>
+                  <th scope="col">Alamat</th>
                   <th scope="col">Aksi</th>
                 </tr>
               </thead>
               <tbody>
-                @foreach( $jurusan as $jrs )
+                @foreach( $siswa as $sw )
                 <tr>
                   <th scope="row">{{ $loop->iteration }}</th>
-                  <td>{{ $jrs->nama_jurusan }}</td>
+                  <td>{{ $sw->nama }}</td>
+                  <td>{{ $sw->Alamat }}</td>
                   <td>
-                    <a href="/jurusan/{{ $jrs->id }}" class="badge badge-info">detail</a>
+                    <a href="" class="badge badge-success">edit</a>
+                    <a href="" class="badge badge-danger">delete</a>
                   </td>
                 </tr>
                 @endforeach
               </tbody>
+              
             </table>
 </div>
 

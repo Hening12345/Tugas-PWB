@@ -30,6 +30,7 @@ Route::get('/character', function () {
 });
 
 Route::get('/mahasiswa', 'MahasiswaController@index');
+Route::get('/siswa', 'SiswaController@index');
 
 Route::get('/jurusan', 'JurusanController@index');
 Route::get('/jurusan/create', 'JurusanController@create');
@@ -39,5 +40,12 @@ Route::delete('/jurusan/{jurusan}', 'JurusanController@destroy');
 Route::get('/jurusan/{jurusan}/editjrs', 'JurusanController@edit');
 Route::patch('/jurusan/{jurusan}', 'JurusanController@update');
 Route::resource('jurusan', 'JurusanController');
-
-
+/**
+Route::get('siswa','SiswaController@index');
+Route::get('/siswa/create', 'SiswaController@create');
+Route::get('/siswa/{siswa}', 'SiswaController@show');
+Route::post('/siswa','SiswaController@create');
+Route::delete('/siswa/{id}','SiswaController@destroy');
+Route::get('/siswa/{siswa}/editsw', 'SiswaController@edit');
+Route::patch('/siswa/{siswa}', 'SiswaController@update');
+Route::resource('siswa', 'SiswaController');**/
